@@ -78,6 +78,17 @@
         <artifactId>maven-war-plugin</artifactId>
         <configuration>
           <failOnMissingWebXml>false</failOnMissingWebXml>
+          <webResources>
+            <resource>
+              <directory>src/main/webapp/</directory>
+              <targetPath>WEB-INF</targetPath>
+              <filtering>true</filtering>
+              <includes>
+                <include>**/*.xml</include>
+              </includes>
+            </resource>
+          </webResources>
+          <warName>appl</warName>
         </configuration>
       </plugin>
       <plugin>
