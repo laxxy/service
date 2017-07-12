@@ -78,20 +78,11 @@
         <artifactId>maven-war-plugin</artifactId>
         <configuration>
           <failOnMissingWebXml>false</failOnMissingWebXml>
-          <outputDirectory>${project.build.directory}</outputDirectory>
-          <workDirectory>${project.build.directory}/target/</workDirectory>
-          <webappDirectory>${project.build.webappDirectory}</webappDirectory>
-          <nonFilteredFileExtensions>
-            <nonFilteredFileExtension>pdf</nonFilteredFileExtension>
-            <nonFilteredFileExtension>png</nonFilteredFileExtension>
-            <nonFilteredFileExtension>gif</nonFilteredFileExtension>
-            <nonFilteredFileExtension>jsp</nonFilteredFileExtension>
-          </nonFilteredFileExtensions>
           <webResources>
             <resource>
-              <directory>src/main/webapp/</directory>
+              <directory>src/java/main/webapp/</directory>
               <targetPath>WEB-INF</targetPath>
-              <filtering>true</filtering>
+              <filtering>false</filtering>
               <includes>
                 <include>**/*.xml</include>
               </includes>
