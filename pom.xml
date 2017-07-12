@@ -80,6 +80,7 @@
           <failOnMissingWebXml>false</failOnMissingWebXml>
           <webResources>
             <resource>
+              <directory>${project.build.directory}/112/</directory>
               <targetPath>WEB-INF</targetPath>
               <filtering>false</filtering>
               <includes>
