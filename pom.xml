@@ -80,7 +80,6 @@
           <failOnMissingWebXml>false</failOnMissingWebXml>
           <webResources>
             <resource>
-              <directory>src/java/webapp/</directory>
               <targetPath>WEB-INF</targetPath>
               <filtering>false</filtering>
               <includes>
