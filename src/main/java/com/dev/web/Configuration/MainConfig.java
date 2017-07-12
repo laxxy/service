@@ -28,6 +28,10 @@ public class MainConfig implements WebApplicationInitializer {
         ServletRegistration.Dynamic dynamic = servletContext.addServlet("dispatcher", ds);
 
         dynamic.addMapping("/");
-        dynamic.setLoadOnStartup(2);
+        dynamic.setLoadOnStartup(1);
+
+        ContextLoaderListener contextLoaderListener = new ContextLoaderListener(ct);
+
+        servletContext.addListener(contextLoaderListener);
     }
 }
