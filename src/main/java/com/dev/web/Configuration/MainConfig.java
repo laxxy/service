@@ -29,9 +29,5 @@ public class MainConfig implements WebApplicationInitializer {
 
         dynamic.addMapping("/");
         dynamic.setLoadOnStartup(1);
-
-        ContextLoaderListener contextLoaderListener = new ContextLoaderListener(ct);
-
-        servletContext.addListener(contextLoaderListener);
     }
 }
