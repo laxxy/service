@@ -17,7 +17,7 @@ public class MainConfig implements WebApplicationInitializer {
 
         ct.register(WebAppConfig.class);
 
-        //servletContext.addListener(new ContextLoaderListener(ct));
+        servletContext.addListener(new ContextLoaderListener(ct));
 
         ct.setServletContext(servletContext);
 

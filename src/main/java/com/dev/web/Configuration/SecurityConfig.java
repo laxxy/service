@@ -1,3 +1,4 @@
+/*
 package com.dev.web.Configuration;
 
 import com.dev.web.Service.LoginUserService;
@@ -11,11 +12,13 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
+*/
 /**
  * Created by cosxt on 11/23/2016.
- */
-@Configuration
-@EnableWebSecurity
+ *//*
+
+//@Configuration
+//@EnableWebSecurity
 @EnableGlobalMethodSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -36,7 +39,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .disable()
                 .authorizeRequests()
                 .antMatchers("/login").permitAll()
-                .antMatchers("/core/**").authenticated()
+                .antMatchers("/core*/
+/**").authenticated()
                 .anyRequest().permitAll()
                 .and();
         http
@@ -59,4 +63,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public ShaPasswordEncoder getShaPasswordEncoder(){
         return new ShaPasswordEncoder();
     }
-}
+}*/
