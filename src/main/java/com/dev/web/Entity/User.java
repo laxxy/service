@@ -7,8 +7,8 @@ import javax.persistence.*;
 /**
  * Created by cosxt on 11/23/2016.
  */
-@Entity
-@Table(name = "USERS")
+@Entity(name = "Users")
+@Table(name = "users")
 public class User {
 
     private Long id;
@@ -28,8 +28,9 @@ public class User {
         return password;
     }
 
-    public void setPassword(String password) {
+    public User setPassword(String password) {
         this.password = password;
+        return this;
     }
 
     @Column(name = "USER_EMAIL")
@@ -37,7 +38,12 @@ public class User {
         return email;
     }
 
-    public void setEmail(String email) {
+    public User setEmail(String email) {
         this.email = email;
+        return this;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
