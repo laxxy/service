@@ -8,6 +8,7 @@ import java.util.List;
  * Created by cosxt on 9/4/2017.
  */
 public interface UserService {
+    User getUserByEmail(String email);
     void add(User user);
     List<User> listUsers();
 }
