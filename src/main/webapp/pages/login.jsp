@@ -38,9 +38,8 @@
 <div id="preloader"></div>
 <div id="top"></div>
 
-<%--<sec:authorize access="!isAuthenticated()">
-    <c:url value="/j_spring_security_check" var="loginUrl" />--%>
-<!-- /.parallax full screen background image -->
+<sec:authorize access="!isAuthenticated()">
+<c:url value="/j_spring_security_check" var="loginUrl"/>
 <div class="fullscreen landing parallax" data-img-width="2000" data-img-height="1333" data-diff="100">
 
     <div class="overlay">
@@ -92,7 +91,7 @@
         </div>
     </div>
 </div>
-<%--</sec:authorize>--%>
+</sec:authorize>
 
 <!-- /.javascript files -->
 <script src="<c:url value="/assets/js/jquery.js"/>"></script>
