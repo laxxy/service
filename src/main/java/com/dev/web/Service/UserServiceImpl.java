@@ -3,6 +3,7 @@ package com.dev.web.Service;
 import com.dev.web.Entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -10,10 +11,15 @@ import java.util.List;
  * Created by cosxt on 9/4/2017.
  */
 @Service
+@Transactional
 public class UserServiceImpl implements UserService {
 
+    private final UserDAO userDAO;
+
     @Autowired
-    private UserDAO userDAO;
+    public UserServiceImpl(UserDAO userDAO) {
+        this.userDAO = userDAO;
+    }
 
     @Override
     public User getUserByEmail(String email) {
