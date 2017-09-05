@@ -22,6 +22,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User getUserByEmail(String email) {
+        return userDAO.getUserByEmail(email);
+    }
+
+    @Override
     public void add(User user) {
         userDAO.add(user);
     }
@@ -30,4 +35,6 @@ public class UserServiceImpl implements UserService {
     public List<User> listUsers() {
         return userDAO.listUsers();
     }
+
+
 }

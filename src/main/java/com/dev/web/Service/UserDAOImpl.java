@@ -19,6 +19,11 @@ public class UserDAOImpl implements UserDAO {
     private EntityManager entityManager;
 
     @Override
+    public User getUserByEmail(String email) {
+        return entityManager.find(User.class, email);
+    }
+
+    @Override
     public void add(User user) {
         entityManager.persist(user);
     }
