@@ -18,15 +18,18 @@ import java.util.Set;
 @Service
 public class LoginUserService implements UserDetailsService {
 
+    private final UserService userService;
+
     @Autowired
-    private UserService userService;
+    public LoginUserService(UserService userService) {
+        this.userService = userService;
+    }
 
     @Override
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         User user = userService.getUserByEmail(s);
         Set<GrantedAuthority> roles = new HashSet<>();
         roles.add(new SimpleGrantedAuthority(UserRole.USER.name()));
-
         return new org.springframework.security.core.userdetails.User(user.getEmail(),
                 user.getPassword(), roles);
     }

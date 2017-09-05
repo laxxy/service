@@ -72,7 +72,7 @@
 
                     <div class="signup-header wow fadeInUp">
                         <h3 class="form-title text-center">Plese log in to get started</h3>
-                        <form class="form-header" action="${loginUrl}" role="form" method="POST" id="#">
+                        <form class="form-header" action="${loginUrl}" role="form" method="post" id="#">
                             <div class="form-group">
                                 <input class="form-control input-lg" name="sec_username" id="login" type="email" placeholder="Email" required>
                             </div>

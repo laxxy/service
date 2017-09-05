@@ -13,7 +13,7 @@ public class MainController {
 
     @GetMapping("/")
     public String getMainPage() {
-        return "redirect:/login";
+        return "main";
     }
 
     @GetMapping("/error")
