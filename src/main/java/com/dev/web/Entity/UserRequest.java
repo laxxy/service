@@ -1,21 +1,35 @@
 package com.dev.web.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Created by cosxt on 9/20/2017.
  */
 public class UserRequest {
 
+    @JsonIgnore
     private String stationIdFrom;
+    @JsonIgnore
     private String stationIdTo;
-    private String stationFrom;
-    private String stationTo;
+    private String station_from;
+    private String station_till;
+    @JsonIgnore
     private String dateDep;
+    @JsonIgnore
     private String timeDep;
+    @JsonIgnore
     private String timeDepTill;
+    @JsonIgnore
     private String anotherEc;
+    @JsonIgnore
     private String search;
 
     public UserRequest() {}
+
+    public UserRequest(String stationFrom, String stationTo) {
+        this.station_from = stationFrom;
+        this.station_till = stationTo;
+    }
 
     public String getStationIdFrom() {
         return stationIdFrom;
@@ -33,20 +47,20 @@ public class UserRequest {
         this.stationIdTo = stationIdTo;
     }
 
-    public String getStationFrom() {
-        return stationFrom;
+    public String getStation_from() {
+        return station_from;
     }
 
-    public void setStationFrom(String stationFrom) {
-        this.stationFrom = stationFrom;
+    public void setStation_from(String station_from) {
+        this.station_from = station_from;
     }
 
-    public String getStationTo() {
-        return stationTo;
+    public String getStation_till() {
+        return station_till;
     }
 
-    public void setStationTo(String stationTo) {
-        this.stationTo = stationTo;
+    public void setStation_till(String station_till) {
+        this.station_till = station_till;
     }
 
     public String getDateDep() {
@@ -87,5 +101,10 @@ public class UserRequest {
 
     public void setSearch(String search) {
         this.search = search;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("station_from=%s, station_till=%s", station_from, station_till);
     }
 }
