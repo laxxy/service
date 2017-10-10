@@ -11,11 +11,10 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/service")
 public class ServiceController {
 
-    //@RequestMapping(method = RequestMethod.POST)
-    //@ResponseBody
     @PostMapping
     public UserRequest getAvailableTrains(@RequestBody UserRequest userRequest) {
-        System.out.println(userRequest + " <<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+        String station_from = userRequest.getStation_from();
+        String station_till = userRequest.getStation_till();
         return new UserRequest();
     }
 }

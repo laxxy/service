@@ -20,4 +20,9 @@ public class MainController {
     public String getErrorPage() {
         return "error";
     }
+
+    @GetMapping("/start")
+    public String getServiceStartPage() {
+        return "start";
+    }
 }
