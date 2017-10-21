@@ -10,8 +10,8 @@ import java.util.List;
 /**
  * Created by cosxt on 9/4/2017.
  */
-@Service
-@Transactional
+//@Service
+//@Transactional
 public class UserServiceImpl implements UserService {
 
     private final UserDAO userDAO;

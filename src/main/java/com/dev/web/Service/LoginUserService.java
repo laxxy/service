@@ -1,4 +1,4 @@
-package com.dev.web.Service;
+/*package com.dev.web.Service;
 
 import com.dev.web.Entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,9 +12,6 @@ import org.springframework.stereotype.Service;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created by cosxt on 11/23/2016.
- */
 @Service
 public class LoginUserService implements UserDetailsService {
 
@@ -34,3 +31,4 @@ public class LoginUserService implements UserDetailsService {
                 user.getPassword(), roles);
     }
 }
+*/

@@ -13,7 +13,6 @@ public class UserRequest {
     private String stationIdTo;
     private String station_from;
     private String station_till;
-    @JsonIgnore
     private String dateDep;
     @JsonIgnore
     private String timeDep;
@@ -23,12 +22,32 @@ public class UserRequest {
     private String anotherEc;
     @JsonIgnore
     private String search;
+    @JsonIgnore
+    private String desiredTrain;
+    @JsonIgnore
+    private String desiredClass;
 
     public UserRequest() {}
 
     public UserRequest(String stationFrom, String stationTo) {
         this.station_from = stationFrom;
         this.station_till = stationTo;
+    }
+
+    public String getDesiredTrain() {
+        return desiredTrain;
+    }
+
+    public void setDesiredTrain(String desiredTrain) {
+        this.desiredTrain = desiredTrain;
+    }
+
+    public String getDesiredClass() {
+        return desiredClass;
+    }
+
+    public void setDesiredClass(String desiredClass) {
+        this.desiredClass = desiredClass;
     }
 
     public String getStationIdFrom() {
@@ -105,6 +124,6 @@ public class UserRequest {
 
     @Override
     public String toString() {
-        return String.format("station_from=%s, station_till=%s", station_from, station_till);
+        return String.format("station_from=%s, station_till=%s, dateDep=%s", station_from, station_till, dateDep);
     }
 }

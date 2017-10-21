@@ -1,4 +1,4 @@
-import com.dev.web.Configuration.HibernateConfig;
+/*import com.dev.web.Configuration.HibernateConfig;
 import com.dev.web.Entity.User;
 import com.dev.web.Service.UserService;
 import org.junit.Test;
@@ -8,10 +8,6 @@ import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
-
-/**
- * Created by cosxt on 9/5/2017.
- */
 
 @DirtiesContext
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -28,3 +24,4 @@ public class TestGet {
         System.out.println(userByEmail.getEmail() + " <<>><<>><<>>");
     }
 }
+*/

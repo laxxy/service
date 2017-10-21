@@ -16,15 +16,29 @@
     <link href="<c:url value="/assets/css/font-awesome.min.css"/>" rel="stylesheet">
 </head>
 <body>
+<div>
     <div>
-        <li role="presentation" class="disabled"><a href="#">Kiev</a></li>
+        <label id="from" role="presentation" class="disabled">Kiev</label>
     </div>
     <div>
-        <li role="presentation" class="disabled"><a href="#">Lviv</a></li>
+        <label id="to" role="presentation" class="disabled">Lviv</label>
     </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+    <div>
+        <label id="date" role="presentation" class="disabled">20.10.2017</label>
+    </div>
+    <div>
+        <span id="train" role="presentation" class="disabled"><a href="#">745</a></span>
+    </div>
+    <div>
+        <span id="cls" role="presentation" class="disabled"><a href="#">2</a></span>
+    </div>
+        <button type="submit" class="btn btn-default"
+                onclick="startQueue()">
+            Submit</button>
+</div>
 
-    <script src="<c:url value="/assets/js/jquery.js"/>"></script>
+    <script src="<c:url value="/assets/js/jquery2.js"/>"></script>
     <script src="<c:url value="/assets/js/bootstrap.min.js"/>"></script>
+    <script src="<c:url value="/assets/js/api_calls.js"/>"></script>
 </body>
 </html>

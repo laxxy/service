@@ -1,4 +1,4 @@
-import com.dev.web.Configuration.HibernateConfig;
+/*import com.dev.web.Configuration.HibernateConfig;
 import com.dev.web.Entity.User;
 import com.dev.web.Service.UserService;
 
@@ -13,9 +13,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 import java.util.List;
 
-/**
- * Created by cosxt on 9/4/2017.
- */
+
 @DirtiesContext
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = HibernateConfig.class)
@@ -39,3 +37,4 @@ public class TestUserService {
         System.out.println(users.size() + "<<<<<<<<<<<<<<<<<<<<<");
     }
 }
+*/

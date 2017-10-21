@@ -1,4 +1,4 @@
-package com.dev.web.Configuration;
+/*package com.dev.web.Configuration;
 
 import com.dev.web.Service.LoginUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,13 +11,10 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
-/**
- * Created by cosxt on 11/23/2016.
- */
 
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
+@EnableGlobalMethodSecurity(securedEnabled = false, prePostEnabled = false)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final LoginUserService loginUserService;
@@ -65,3 +62,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new ShaPasswordEncoder();
     }
 }
+*/

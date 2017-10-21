@@ -1,4 +1,4 @@
-package com.dev.web.Configuration;
+/*package com.dev.web.Configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -13,9 +13,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.util.Properties;
 
-/**
- * Created by cosxt on 12/8/2016.
- */
 @Configuration
 @EnableTransactionManagement
 @ComponentScans(value = {@ComponentScan("com.dev.web.Service")})
@@ -54,3 +51,4 @@ public class HibernateConfig {
         return properties;
     }
 }
+*/

@@ -1,4 +1,4 @@
-package com.dev.web.Service;
+/*package com.dev.web.Service;
 
 import com.dev.web.Entity.User;
 import org.springframework.stereotype.Repository;
@@ -9,9 +9,7 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import java.util.List;
 
-/**
- * Created by cosxt on 12/8/2016.
- */
+
 @Repository
 public class UserDAOImpl implements UserDAO {
 
@@ -38,3 +36,4 @@ public class UserDAOImpl implements UserDAO {
         return entityManager.createQuery(criteriaQuery).getResultList();
     }
 }
+*/
