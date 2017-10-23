@@ -3,6 +3,8 @@ package com.dev.web.Configuration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.web.servlet.config.annotation.AsyncSupportConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -14,6 +16,7 @@ import org.springframework.web.servlet.view.JstlView;
  */
 @Configuration
 @EnableWebMvc
+@EnableAsync
 @ComponentScan("com.dev.web")
 public class WebAppConfig extends WebMvcConfigurerAdapter {
 
@@ -32,5 +35,10 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
         ir.setViewClass(JstlView.class);
 
         return ir;
+    }
+
+    @Override
+    public void configureAsyncSupport(AsyncSupportConfigurer configurer) {
+        configurer.setDefaultTimeout(60*1000L);
     }
 }

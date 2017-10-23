@@ -1,0 +1,97 @@
+{
+  "value":[
+    {
+      "num":"847Л",
+      "model":0,
+      "category":0,
+      "travel_time":"7:06",
+      "from":{
+        "station":"Киев-Пассажирский",
+        "date":1508993280,
+        "src_date":"2017-10-26 07:48:00"
+      },
+      "till":{
+        "station":"Ровно",
+        "date":1509018840,
+        "src_date":"2017-10-26 14:54:00"
+      },
+      "types":[
+        {
+          "id":"С2",
+          "title":"Сидячий второго класса",
+          "letter":"С2",
+          "places":552
+        }
+      ],
+      "allow_stud":1,
+      "allow_transportation":1,
+      "allow_booking":1,
+      "allow_roundtrip":1
+    },
+    {
+      "num":"855Л",
+      "model":0,
+      "category":0,
+      "travel_time":"7:49",
+      "from":{
+        "station":"Киев-Пассажирский",
+        "date":1509009240,
+        "src_date":"2017-10-26 12:14:00"
+      },
+      "till":{
+        "station":"Ровно",
+        "date":1509037380,
+        "src_date":"2017-10-26 20:03:00"
+      },
+      "types":[
+        {
+          "id":"С3",
+          "title":"Сидячий третьего класса",
+          "letter":"С3",
+          "places":650
+        }
+      ],
+      "allow_stud":1,
+      "allow_transportation":1,
+      "allow_booking":1,
+      "allow_roundtrip":1
+    },
+    {
+      "num":"097К",
+      "model":0,
+      "category":0,
+      "travel_time":"6:25",
+      "from":{
+        "station":"Киев-Пассажирский",
+        "date":1509042120,
+        "src_date":"2017-10-26 21:22:00"
+      },
+      "till":{
+        "station":"Ковель",
+        "date":1509065220,
+        "src_date":"2017-10-27 03:47:00"
+      },
+      "types":[
+        {
+          "id":"Л",
+          "title":"Люкс",
+          "letter":"Л",
+          "places":1
+        },
+        {
+          "id":"П",
+          "title":"Плацкарт",
+          "letter":"П",
+          "places":52
+        }
+      ],
+      "allow_stud":1,
+      "allow_transportation":1,
+      "allow_booking":1,
+      "allow_roundtrip":1
+    }
+  ],
+  "error":null,
+  "data":null,
+  "captcha":null
+}

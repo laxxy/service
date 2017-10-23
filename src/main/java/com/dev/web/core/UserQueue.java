@@ -27,29 +27,29 @@ public class UserQueue {
     public void startQueue(RequestContext requestContext, UserRequest userRequest) {
 
         final String desiredTrain = userRequest.getDesiredTrain();
-        final String desiredClass = userRequest.getDesiredClass();
+        String desiredClass = userRequest.getDesiredClass()[0];
 
-        while (true) {
+            while (true) {
 
-            JsonPath execute = execute(requestContext, userRequest);
+                JsonPath execute = execute(requestContext, userRequest);
 
-            List<Object> value = execute.getList("value");
+                List<Object> value = execute.getList("value");
 
-            Optional<Object> any = value.stream().filter(o -> o.toString().contains(desiredTrain)).findAny();
-            if (any.isPresent()) {
-                String s = String.valueOf(any.get());
-                if (s.contains(String.format("id=%s", desiredClass))) {
-                    System.out.println(s);
-                    break;
+                Optional<Object> any = value.stream().filter(o -> o.toString().contains(desiredTrain)).findAny();
+                if (any.isPresent()) {
+                    String s = String.valueOf(any.get());
+                    if (s.contains(String.format("id=%s", desiredClass))) {
+                        System.out.println(s);
+                        break;
+                    }
                 }
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println("Send request >>");
             }
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            System.out.println("Send request >>");
-        }
     }
 
     private JsonPath execute(RequestContext requestContext, UserRequest userRequest) {

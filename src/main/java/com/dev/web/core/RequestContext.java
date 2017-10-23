@@ -37,8 +37,8 @@ public class RequestContext {
         parameters.put("another_ec", "0");
         parameters.put("search", "");*/
 
-        return "station_id_from=2200001" +
-        "&station_id_till=2218000" +
+        return "station_id_from=" + userRequest.getStationIdFrom() +
+        "&station_id_till=" + userRequest.getStationIdTo() +
         "&station_from=" + userRequest.getStation_from() +
         "&station_till=" + userRequest.getStation_till() +
         "&date_dep=" + userRequest.getDateDep() +

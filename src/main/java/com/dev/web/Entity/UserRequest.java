@@ -25,7 +25,7 @@ public class UserRequest {
     @JsonIgnore
     private String desiredTrain;
     @JsonIgnore
-    private String desiredClass;
+    private String[] desiredClass;
 
     public UserRequest() {}
 
@@ -42,11 +42,11 @@ public class UserRequest {
         this.desiredTrain = desiredTrain;
     }
 
-    public String getDesiredClass() {
+    public String[] getDesiredClass() {
         return desiredClass;
     }
 
-    public void setDesiredClass(String desiredClass) {
+    public void setDesiredClass(String... desiredClass) {
         this.desiredClass = desiredClass;
     }
 

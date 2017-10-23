@@ -28,6 +28,7 @@ public class MainConfig implements WebApplicationInitializer {
         ServletRegistration.Dynamic dynamic = servletContext.addServlet("dispatcher", ds);
 
         dynamic.addMapping("/");
+        dynamic.setAsyncSupported(true);
         dynamic.setLoadOnStartup(1);
     }
 }
