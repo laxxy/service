@@ -24,7 +24,7 @@
         <label id="to" role="presentation" class="disabled">Lviv</label>
     </div>
     <div>
-        <label id="date" role="presentation" class="disabled">22.10.2017</label>
+        <label id="date" role="presentation" class="disabled">27.10.2017</label>
     </div>
     <div>
         <span id="train" role="presentation" class="disabled"><a href="#">745</a></span>

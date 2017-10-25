@@ -33,6 +33,11 @@ public class UserQueue {
 
                 JsonPath execute = execute(requestContext, userRequest);
 
+                /*if (execute.get("value").toString().contains("\"error\":true")) {
+                    System.out.println("Interrupted!!");
+                    break;
+                }*/ //TODO >><<
+
                 List<Object> value = execute.getList("value");
 
                 Optional<Object> any = value.stream().filter(o -> o.toString().contains(desiredTrain)).findAny();

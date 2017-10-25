@@ -1,4 +1,5 @@
 import com.dev.web.Entity.UserRequest;
+import com.dev.web.core.Constants;
 import com.dev.web.core.RequestContext;
 import com.dev.web.core.UserQueue;
 import org.junit.Before;
@@ -13,27 +14,16 @@ public class UZRequestTest {
 
     private UserRequest userRequest;
 
-    private static final String LVIV = "Львов";
-    private static final String LVIV_ID = "2218000";
-    private static final String KYIV = "Киев";
-    private static final String KYIV_ID = "2200001";
-    private static final String RIVNE = "Ровно";
-    private static final String RIVNE_ID = "2218400";
-    private static final String DATE_DEP = "27.10.2017";
-    private static final String TRAIN = "097К";
-    private static final String CLASS = "П";
-    private static final String CLASS_2 = "K";
-
     @Before
     public void prepare() {
         userRequest = new UserRequest();
-        userRequest.setStation_from(KYIV);
-        userRequest.setStation_till(RIVNE);
-        userRequest.setDateDep(DATE_DEP);
-        userRequest.setDesiredTrain(TRAIN);
-        userRequest.setDesiredClass(CLASS);
-        userRequest.setStationIdFrom(KYIV_ID);
-        userRequest.setStationIdTo(RIVNE_ID);
+        userRequest.setStation_from(Constants.KYIV);
+        userRequest.setStation_till(Constants.RIVNE);
+        userRequest.setDateDep(Constants.DATE_DEP);
+        userRequest.setDesiredTrain(Constants.TRAIN);
+        userRequest.setDesiredClass(Constants.CLASS);
+        userRequest.setStationIdFrom(Constants.KYIV_ID);
+        userRequest.setStationIdTo(Constants.RIVNE_ID);
 
     }
 
