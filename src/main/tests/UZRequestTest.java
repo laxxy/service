@@ -17,13 +17,13 @@ public class UZRequestTest {
     @Before
     public void prepare() {
         userRequest = new UserRequest();
-        userRequest.setStation_from(Constants.LVIV);
-        userRequest.setStation_till(Constants.KYIV);
+        userRequest.setStation_from(Constants.KYIV);
+        userRequest.setStation_till(Constants.KOVEL);
         userRequest.setDateDep(Constants.DATE_DEP);
-        userRequest.setDesiredTrain(Constants.TRAIN_705L);
-        userRequest.setDesiredClass(Constants.CLASS_IC_C2);
-        userRequest.setStationIdFrom(Constants.LVIV_ID);
-        userRequest.setStationIdTo(Constants.KYIV_ID);
+        userRequest.setDesiredTrain(Constants.TRAIN_097K);
+        userRequest.setDesiredClass(Constants.CLASS);
+        userRequest.setStationIdFrom(Constants.KYIV_ID);
+        userRequest.setStationIdTo(Constants.KOVEL_ID);
 
     }
 
