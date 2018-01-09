@@ -29,15 +29,16 @@ public class UserQueue {
         final String desiredTrain = userRequest.getDesiredTrain();
         String desiredClass = userRequest.getDesiredClass()[0];
 
-            while (true) {
+        while (true) {
 
-                JsonPath execute = execute(requestContext, userRequest);
+            JsonPath execute = execute(requestContext, userRequest);
 
                 /*if (execute.get("value").toString().contains("\"error\":true")) {
                     System.out.println("Interrupted!!");
                     break;
                 }*/ //TODO >><<
 
+            try {
                 List<Object> value = execute.getList("value");
 
                 Optional<Object> any = value.stream().filter(o -> o.toString().contains(desiredTrain)).findAny();
@@ -48,14 +49,16 @@ public class UserQueue {
                         break;
                     }
                 }
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                System.out.println("Send request >>");
+                Thread.sleep(5000);
+            } catch (ClassCastException e) {
+                System.out.println(execute.get().toString());
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
+            System.out.println("Send request >>");
     }
+
+}
 
     private JsonPath execute(RequestContext requestContext, UserRequest userRequest) {
 
