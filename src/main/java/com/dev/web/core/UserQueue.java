@@ -8,6 +8,8 @@ import com.jayway.restassured.response.Header;
 import com.jayway.restassured.response.ResponseBodyExtractionOptions;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
@@ -39,12 +41,17 @@ public class UserQueue {
                 }*/ //TODO >><<
 
             try {
-                List<Object> value = execute.getList("value");
+                List value = (List) execute.getMap("data").get("list");
 
                 Optional<Object> any = value.stream().filter(o -> o.toString().contains(desiredTrain)).findAny();
                 if (any.isPresent()) {
-                    String s = String.valueOf(any.get());
-                    if (s.contains(String.format("id=%s", desiredClass))) {
+                    HashMap o = (HashMap) any.get();
+                    ArrayList s = (ArrayList) o.get("types");
+                    /*if (s.contains(String.format("id=%s", desiredClass))) {
+                        System.out.println(s);
+                        break;
+                    }*/
+                    if (!s.isEmpty()) {
                         System.out.println(s);
                         break;
                     }
