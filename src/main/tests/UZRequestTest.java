@@ -18,10 +18,11 @@ public class UZRequestTest {
     public void prepare() {
         userRequest = new UserRequest();
         userRequest.setDateDep(Constants.DATE_DEP);
-        userRequest.setDesiredTrain(Constants.TRAIN_743K);
-        userRequest.setDesiredClass(Constants.CLASS_2);
-        userRequest.setStationIdFrom(Constants.KOVEL_ID);
-        userRequest.setStationIdTo(Constants.IF_ID);
+        //userRequest.setDesiredTrain(Constants.TRAIN_743K);
+        userRequest.setDesiredTrains(Constants.TRAINS);
+        userRequest.setDesiredClass(Constants.CLASS_IC_C2);
+        userRequest.setStationIdFrom(Constants.KYIV_ID);
+        userRequest.setStationIdTo(Constants.LVIV_ID);
 
     }
 

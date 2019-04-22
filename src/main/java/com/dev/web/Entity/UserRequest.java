@@ -2,6 +2,8 @@ package com.dev.web.Entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import java.util.List;
+
 /**
  * Created by cosxt on 9/20/2017.
  */
@@ -26,6 +28,7 @@ public class UserRequest {
     private String desiredTrain;
     @JsonIgnore
     private String[] desiredClass;
+    private List<String> desiredTrains;
 
     public UserRequest() {}
 
@@ -120,6 +123,14 @@ public class UserRequest {
 
     public void setSearch(String search) {
         this.search = search;
+    }
+
+    public List<String> getDesiredTrains() {
+        return desiredTrains;
+    }
+
+    public void setDesiredTrains(List<String> desiredTrains) {
+        this.desiredTrains = desiredTrains;
     }
 
     @Override

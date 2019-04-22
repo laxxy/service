@@ -29,6 +29,7 @@ public class UserQueue {
     public void startQueue(RequestContext requestContext, UserRequest userRequest) {
 
         final String desiredTrain = userRequest.getDesiredTrain();
+        List<String> desiredTrains = userRequest.getDesiredTrains();
         String desiredClass = userRequest.getDesiredClass()[0];
 
         while (true) {
@@ -43,7 +44,13 @@ public class UserQueue {
             try {
                 List value = (List) execute.getMap("data").get("list");
 
-                Optional<Object> any = value.stream().filter(o -> o.toString().contains(desiredTrain)).findAny();
+                Optional<Object> any = value
+                        .stream()
+                        .filter(o ->
+                                desiredTrains
+                                        .stream()
+                                        .filter(j -> o.toString().contains(j)).findFirst().isPresent()/*o.toString().contains(desiredTrain)*/)
+                        .findAny();
                 if (any.isPresent()) {
                     HashMap o = (HashMap) any.get();
                     ArrayList s = (ArrayList) o.get("types");
